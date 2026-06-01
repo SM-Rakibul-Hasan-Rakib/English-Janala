@@ -35,7 +35,7 @@
     <link rel="stylesheet" href="/style/style.css" />
   </head>
   <body>
-    <header>
+    <header class="">
       <div class="navbar bg-base-100 shadow-sm">
         <div class="navbar-start">
           <div class="dropdown">
@@ -77,15 +77,14 @@
               </li>
             </ul>
           </div>
-          <a href="" class="normal-case flex text-xl gap-1"
+          <a href="" class="normal-case ml-5 flex text-xl gap-1"
             ><span class="text-lg font-bold">English</span>
             <img src="/assets/logo.png" alt="" />
             <span class="font-bangla font-semibold">জানালা</span>
           </a>
         </div>
-        <div class="navbar-end hidden lg:flex">
+        <div class="navbar-end hidden mr-5 lg:flex">
           <ul class="menu menu-horizontal px-1 space-x-4">
-            ">
             <li>
               <a class="btn btn-outline btn-primary" href=""
                 ><i class="fa-solid text-xl fa-circle-question"></i>FAQ</a
@@ -106,12 +105,50 @@
         </div>
       </div>
     </header>
+    <section
+      class="w-11/12 mx-auto min-h-[80vh] flex flex-col-reverse lg:flex-row items-center justify-center gap-10"
+    >
+      <!-- Content -->
+      <div class="content w-full lg:w-[40%] text-center lg:text-left">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">
+          <span class="text-sky-500">English</span> is Easy!!
+        </h2>
 
-    <section>
-      <div class="content">
-        <h2><span>English</span> is Easy!!</h2>
+        <p class="text-base md:text-lg leading-relaxed mb-8">
+          আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
+          আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে
+          অন্য একটি Level এ।
+        </p>
+
+        <div class="space-y-3 max-w-sm mx-auto lg:mx-0">
+          <input
+            type="text"
+            placeholder="Enter Your Name"
+            class="w-full border border-gray-300 rounded-md px-4 py-3"
+          />
+
+          <input
+            type="password"
+            placeholder="********"
+            class="w-full border border-gray-300 rounded-md px-4 py-3"
+          />
+
+          <button
+            class="bg-indigo-600 text-white px-6 py-3 rounded-md font-medium"
+          >
+            Get Started
+          </button>
+        </div>
       </div>
-      <div class="image"></div>
+
+      <!-- Image -->
+      <div class="w-full lg:w-[60%] flex justify-center items-center">
+        <img
+          src="/assets/rakib.jpg"
+          alt="English Learning"
+          class="h-[300px] md:h-[450px] lg:h-[650px] xl:h-[750px] w-auto object-contain"
+        />
+      </div>
     </section>
   </body>
 </html>
