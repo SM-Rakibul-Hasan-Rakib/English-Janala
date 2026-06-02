@@ -130,12 +130,11 @@ const displayLevelWord = (words) => {
   wordContainer.innerHTML = "";
 
   if (words.length == 0) {
-    const wordContainer = document.getElementById("word-container");
-    wordContainer.innerHTML = `<div
-        class="text-center col-span-full rounded-xl py-10 space-y-6 font-bangla">
+    wordContainer.innerHTML = `
+      <div class="text-center col-span-full rounded-xl py-10 space-y-6 font-bangla w-full">
         <img class="mx-auto" src="/assets/alert-error.png" alt="" />
         <p class="text-xl font-medium text-gray-400">
-          এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।
+          এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।
         </p>
         <h2 class="text-3xl font-bold">নেক্সট Lesson এ যান</h2>
       </div>`;
@@ -146,29 +145,40 @@ const displayLevelWord = (words) => {
   // 2 get into every word
   words.forEach((word) => {
     console.log(word);
+
     // create card
     const cardDiv = document.createElement("div");
+
+    // এখানে w-full দেওয়া হয়েছে যাতে গ্রিডের ভেতরে কার্ডটি পুরো জায়গা জুড়ে ছড়াতে পারে
+    cardDiv.className = "w-full";
+
     cardDiv.innerHTML = `
-      <div class="bg-white text-center py-10 px-5 space-y-4">
-        <h2 class="font-bold text-xl">${word.word ? word.word : "word is not available"}</h2>
-        <p class="text-gray-600" font-semibold>Meaning /Pronounciation</p>
-        <div class="text-2xl font-medium font-bangla">"${word.meaning ? word.meaning : "meaning is not available"} / ${word.pronunciation ? word.pronunciation : "pronunciation is not available"}"</div>
-        <div class="flex justify-between items-center">
-          <button onClick="loadWordDetail(${word.id})" class="btn bg-[#1A91FF10] hover:bg-[#1A91FF90]">
-            <i class="fa-solid fa-circle-info"></i>
+      <div class="bg-white text-center py-8 px-5 space-y-4 rounded-xl shadow-md border border-gray-100 flex flex-col justify-between h-full w-full">
+        <div>
+          <h2 class="font-bold text-2xl text-gray-800">${word.word ? word.word : "word is not available"}</h2>
+          <p class="text-gray-500 text-sm font-semibold mt-1">Meaning / Pronunciation</p>
+          
+          <!-- টেক্সট ব্রেকিং এবং ফন্ট সাইজ রেসপন্সিভ করা হয়েছে যাতে বাংলা অর্থ বড় হলেও ভেঙে নিচে না যায় -->
+          <div class="text-xl md:text-2xl font-medium font-bangla mt-3 text-gray-700 break-words px-2">
+            "${word.meaning ? word.meaning : "meaning is not available"} / ${word.pronunciation ? word.pronunciation : "pronunciation is not available"}"
+          </div>
+        </div>
+
+        <div class="flex justify-between items-center pt-4 mt-auto">
+          <button onClick="loadWordDetail(${word.id})" class="btn bg-[#1A91FF10] hover:bg-[#1A91FF90] px-4 py-2 rounded-lg transition-colors">
+            <i class="fa-solid fa-circle-info text-[#1A91FF]"></i>
           </button>
-          <button onClick="pronounceWord('${word.word}')" class="btn bg-[#1A91FF10] hover:bg-[#1A91FF90]">
-            <i class="fa-solid fa-volume-high"></i>
+          <button onClick="pronounceWord('${word.word}')" class="btn bg-[#1A91FF10] hover:bg-[#1A91FF90] px-4 py-2 rounded-lg transition-colors">
+            <i class="fa-solid fa-volume-high text-[#1A91FF]"></i>
           </button>
         </div>
       </div>
-  `;
+    `;
     // append into container
     wordContainer.appendChild(cardDiv);
   });
   manageSpinner(false);
 };
-
 const displayLesson = (lessons) => {
   // 1. get the container
   const levelContainer = document.getElementById("level-container");
