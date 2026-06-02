@@ -161,6 +161,28 @@
         id="level-container"
       ></div>
     </section>
+    <!-- search section -->
+    <section class="flex justify-center py-10">
+      <div class="join">
+        <div>
+          <label class="input validator join-item">
+            <input
+              id="input-search"
+              type="text"
+              placeholder="Search vocabulary Now"
+              required
+            />
+          </label>
+        </div>
+        <button id="btn-search" class="btn btn-primary join-item">
+          Search
+        </button>
+      </div>
+    </section>
+
+    <section id="spinner" class="flex justify-center items-center py-10">
+      <span class="loading loading-bars loading-xl"></span>
+    </section>
 
     <section
       id="word-container"
@@ -193,7 +215,153 @@
         </div>
       </div>
     </dialog>
+    <section class="w-11/12 max-w-6xl mx-auto py-16">
+      <!-- Heading -->
+      <h2 class="text-4xl font-bold text-center mb-12">
+        <span class="text-sky-500">Frequently</span> Asked Questions
+      </h2>
 
+      <!-- FAQ Item 1 -->
+      <div class="collapse collapse-plus bg-slate-100 rounded-xl mb-4">
+        <input type="radio" name="faq" checked />
+        <div class="collapse-title text-lg font-medium">
+          1. How can I start learning English on this website?
+        </div>
+        <div class="collapse-content text-slate-500">
+          <p>
+            You can start by exploring our beginner lessons, interactive
+            exercises, and quizzes. We also offer structured courses to guide
+            you step by step.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 2 -->
+      <div class="collapse collapse-plus bg-slate-100 rounded-xl mb-4">
+        <input type="radio" name="faq" />
+        <div class="collapse-title text-lg font-medium">
+          2. Is this website free to use?
+        </div>
+        <div class="collapse-content text-slate-500">
+          <p>
+            Yes, most learning resources are available for free. Some premium
+            features may require a subscription.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 3 -->
+      <div class="collapse collapse-plus bg-slate-100 rounded-xl mb-4">
+        <input type="radio" name="faq" />
+        <div class="collapse-title text-lg font-medium">
+          3. Do I need to create an account?
+        </div>
+        <div class="collapse-content text-slate-500">
+          <p>
+            You can browse lessons without an account, but creating one helps
+            track your progress.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 4 -->
+      <div class="collapse collapse-plus bg-slate-100 rounded-xl mb-4">
+        <input type="radio" name="faq" />
+        <div class="collapse-title text-lg font-medium">
+          4. How can I build my English vocabulary?
+        </div>
+        <div class="collapse-content text-slate-500">
+          <p>
+            Practice daily with vocabulary exercises, flashcards, and reading
+            activities available on the platform.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 5 -->
+      <div class="collapse collapse-plus bg-slate-100 rounded-xl">
+        <input type="radio" name="faq" />
+        <div class="collapse-title text-lg font-medium">
+          5. Do you offer certificates for completed courses?
+        </div>
+        <div class="collapse-content text-slate-500">
+          <p>
+            Yes, certificates are available for selected courses after
+            successful completion.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer --><!-- Footer Section Started -->
+    <footer class="w-full bg-[#E2E2E2] pt-12 relative font-sans">
+      <div
+        class="max-w-[1200px] mx-auto px-6 md:px-10 pb-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6"
+      >
+        <!-- Left Side: Brand and Info -->
+        <div class="flex flex-col gap-2">
+          <!-- Logo Container -->
+          <div class="flex items-center gap-2 text-2xl font-bold">
+            <span class="text-[#111111]">English</span>
+            <!-- Windows Style Logo Box -->
+            <div class="grid grid-cols-2 gap-[2px] w-[18px] h-[18px]">
+              <span class="bg-[#1A91FF]"></span>
+              <span class="bg-[#1A91FF]"></span>
+              <span class="bg-[#1A91FF]"></span>
+              <span class="bg-[#1A91FF]"></span>
+            </div>
+            <span class="text-[#4A4A4A] font-medium">জানালা</span>
+          </div>
+          <!-- Slogan & Subtext -->
+          <h3 class="text-lg font-bold text-[#222222]">ইংরেজি শিখুন সহজে</h3>
+          <p class="text-xs text-[#555555]">
+            Providing ED-Tech Applications since 2025
+          </p>
+        </div>
+
+        <!-- Right Side: Social Links -->
+        <div class="flex flex-col items-start md:items-end gap-2">
+          <span class="text-xs font-bold text-[#666666] tracking-wider"
+            >FOLLOW US</span
+          >
+          <div class="flex gap-4 text-xl text-[#111111]">
+            <a
+              href="https://www.facebook.com/md.rakib.hossain.834311"
+              class="hover:text-[#1A91FF] transition-transform hover:scale-110"
+              aria-label="Facebook"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/s-m-rakibul-hasan-rakib-02b9a8307/"
+              class="hover:text-[#1A91FF] transition-transform hover:scale-110"
+              aria-label="LinkedIn"
+            >
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a
+              href="#"
+              class="hover:text-[#1A91FF] transition-transform hover:scale-110"
+              aria-label="Instagram"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a
+              href="https://github.com/SM-Rakibul-Hasan-Rakib"
+              class="hover:text-[#1A91FF] transition-transform hover:scale-110"
+              aria-label="GitHub"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Dark Bar with Cyan/Blue Border -->
+      <!-- <div
+        class="w-full h-[70px] bg-[#1E1E1E] border-t-4 border-[#1A91FF]"
+      ></div> -->
+    </footer>
     <script src="/scripte/index.js"></script>
   </body>
 </html>
